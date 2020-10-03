@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arthu\\Desktop\\UP\\C#\\Banco_de_Sangue\\Banco_de_Sangue\\Banco_de_Sangue.csproj": {}
+    "C:\\Users\\arthu\\source\\repos\\BancoSangueWPF\\Banco_de_Sangue\\Banco_de_Sangue.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arthu\\Desktop\\UP\\C#\\Banco_de_Sangue\\Banco_de_Sangue\\Banco_de_Sangue.csproj": {
+    "C:\\Users\\arthu\\source\\repos\\BancoSangueWPF\\Banco_de_Sangue\\Banco_de_Sangue.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\Desktop\\UP\\C#\\Banco_de_Sangue\\Banco_de_Sangue\\Banco_de_Sangue.csproj",
+        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\BancoSangueWPF\\Banco_de_Sangue\\Banco_de_Sangue.csproj",
         "projectName": "Banco_de_Sangue",
-        "projectPath": "C:\\Users\\arthu\\Desktop\\UP\\C#\\Banco_de_Sangue\\Banco_de_Sangue\\Banco_de_Sangue.csproj",
+        "projectPath": "C:\\Users\\arthu\\source\\repos\\BancoSangueWPF\\Banco_de_Sangue\\Banco_de_Sangue.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\Desktop\\UP\\C#\\Banco_de_Sangue\\Banco_de_Sangue\\obj\\",
+        "outputPath": "C:\\Users\\arthu\\source\\repos\\BancoSangueWPF\\Banco_de_Sangue\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
