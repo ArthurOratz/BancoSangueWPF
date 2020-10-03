@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Banco_de_Sangue/1.0.0": {
+        "runtime": {
+          "Banco_de_Sangue.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Banco_de_Sangue/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
