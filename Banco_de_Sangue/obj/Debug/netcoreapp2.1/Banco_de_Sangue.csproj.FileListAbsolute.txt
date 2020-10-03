@@ -9,15 +9,3 @@ C:\Users\momow\source\repos\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp
 C:\Users\momow\source\repos\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.AssemblyInfo.cs
 C:\Users\momow\source\repos\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.dll
 C:\Users\momow\source\repos\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.pdb
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\bin\Debug\netcoreapp2.1\Banco_de_Sangue.deps.json
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\bin\Debug\netcoreapp2.1\Banco_de_Sangue.runtimeconfig.json
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\bin\Debug\netcoreapp2.1\Banco_de_Sangue.runtimeconfig.dev.json
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\bin\Debug\netcoreapp2.1\Banco_de_Sangue.dll
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\bin\Debug\netcoreapp2.1\Banco_de_Sangue.pdb
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.csprojAssemblyReference.cache
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.AssemblyInfoInputs.cache
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.AssemblyInfo.cs
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.csproj.CoreCompileInputs.cache
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.dll
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.pdb
-C:\Users\arthu\Desktop\UP\C#\Banco_de_Sangue\Banco_de_Sangue\obj\Debug\netcoreapp2.1\Banco_de_Sangue.genruntimeconfig.cache
