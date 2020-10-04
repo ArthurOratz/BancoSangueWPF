@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Banco_de_Sangue
 {
+    [Table("Tipo_Sanguineo")]
     class Tipo_Sanguineo
     {
         //Construtores
@@ -14,13 +17,14 @@ namespace Banco_de_Sangue
             Fator_RH = Fator_RH;
 
             Tipo_sanguineo = Tipo_sanguineo;
-                        
+
         }
 
         public Tipo_Sanguineo()
         {
             CriadoEm = DateTime.Now;
         }
+        [Key]
         //Atributos, propriedades e caracteristicas
         public int Id { get; set; }
 
