@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q/pBJwjCmIt2VtS9P5d+Er+cbdqWB4LX3nPl5h6ejvBsgMSjJ8NPI6RpXVwVCvdOMLWGG7oLTBVh4N7mfWnkYQ==",
+  "dgSpecHash": "r7yInTbcJdHEiRXBPNgeMrkX8iyhSswfpI2cVasXjTeTESbv4GC2dmybscGn8K3YxN3glW0HPLDlAh47uaTtzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arthu\\source\\repos\\BancoSangueWPF\\Banco_de_Sangue\\Banco_de_Sangue.csproj",
+  "projectFilePath": "C:\\Users\\arthu\\Source\\Repos\\BancoSangueWPF\\Banco_de_Sangue\\Banco_de_Sangue.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
