@@ -17,7 +17,7 @@ namespace Banco_de_Sangue
             Fator_RH = Fator_RH;
 
             Tipo_sanguineo = Tipo_sanguineo;
-                        
+
         }
 
         public Tipo_Sanguineo()
