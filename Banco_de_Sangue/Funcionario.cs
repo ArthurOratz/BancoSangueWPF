@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Banco_de_Sangue
 {
+    [Table("Funcionario")]
     class Funcionario
     {
         //Construtores
@@ -24,6 +27,7 @@ namespace Banco_de_Sangue
         {
             CriadoEm = DateTime.Now;
         }
+        [Key]
         //Atributos, propriedades e caracteristicas
         public string Nome_funcionario { get; set; }
 
@@ -38,7 +42,7 @@ namespace Banco_de_Sangue
         public override string ToString()
         {
             return $"Nome: {Nome_funcionario} | Cpf: {Cpf_funcionario} | E-mail: {E_mail_funcionario} | Telefone: {Telefone_funcionario}";
-            
+
         }
 
     }
