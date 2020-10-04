@@ -13,7 +13,6 @@ namespace BancoSangueWPF.Models
         public string Email { get; set; }
 
         public int Telefone { get; set; }
-
         public string Sexo { get; set; }
     }
 }
