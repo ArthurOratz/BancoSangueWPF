@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BancoSangueWPF.Models
 {
-    class Coleta:BaseModel
+    [Table("Coleta")]
+    class Coleta : EstoqueSangue
     {
-        public Doardor Doador { get; set; }
+
+        public Doador Doador { get; set; }
 
         public Funcionario Funcionario { get; set; }
 
         public DateTime Data { get; set; }
-
-        public TipoSanguineo TipoSanguineo { get; set; }
-
-        public int QuantidadeDoada { get; set; }
     }
 }

@@ -41,5 +41,29 @@ namespace BancoSangueWPF.Views
             frmCadastrarDoador frm = new frmCadastrarDoador();
             frm.ShowDialog();
         }
+
+        private void menuCadastrarFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarFuncionario frm = new frmCadastrarFuncionario();
+            frm.ShowDialog();
+        }
+
+        private void menuCadastrarHospital_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastroHospital frm = new frmCadastroHospital();
+            frm.ShowDialog();
+        }
+
+        private void menuRetirada_Click(object sender, RoutedEventArgs e)
+        {
+            frmColeta frm = new frmColeta();
+            frm.ShowDialog();
+        }
+
+        private void menuColeta_Click(object sender, RoutedEventArgs e)
+        {
+            frmRetirada frm = new frmRetirada();
+            frm.ShowDialog();
+        }
     }
 }

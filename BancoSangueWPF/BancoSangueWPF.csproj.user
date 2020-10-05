@@ -10,7 +10,19 @@
     <Compile Update="Views\frmCadastrarDoador.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\frmCadastrarFuncionario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\frmCadastroHospital.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\frmColeta.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\frmPrincipal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\frmRetirada.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -18,7 +30,19 @@
     <Page Update="Views\frmCadastrarDoador.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\frmCadastrarFuncionario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmCadastroHospital.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmColeta.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\frmPrincipal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmRetirada.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

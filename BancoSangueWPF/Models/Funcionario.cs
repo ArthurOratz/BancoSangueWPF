@@ -8,6 +8,11 @@ namespace BancoSangueWPF.Models
     [Table("Funcionario")]
     class Funcionario : Pessoa
     {
+        public Funcionario()
+        {
+            CriadoEm = DateTime.Now;
+        }
 
+        public List<Coleta> ListaColetas { get; set; }
     }
 }

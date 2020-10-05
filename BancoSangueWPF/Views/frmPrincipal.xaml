@@ -12,7 +12,13 @@
                 <MenuItem x:Name="menuSair" Header="_Sair" Click="menuSair_Click"/>
             </MenuItem>
             <MenuItem Header="_Cadastrar">
-                <MenuItem x:Name="menuCadastrarDoador" Header="Doador" Click="menuCadastrarDoador_Click"/>
+                <MenuItem x:Name="menuCadastrarDoador" Header="_Doador" Click="menuCadastrarDoador_Click"/>
+                <MenuItem x:Name="menuCadastrarFuncionario" Header="_Funcionario" Click="menuCadastrarFuncionario_Click" />
+                <MenuItem x:Name="menuCadastrarHospital" Header="_Hospital" Click="menuCadastrarHospital_Click" />
+            </MenuItem>
+            <MenuItem Header="_Serviços">
+                <MenuItem x:Name="menuColeta" Header="_Coleta" Click="menuColeta_Click"/>
+                <MenuItem x:Name="menuRetirada" Header="_Retirada" Click="menuRetirada_Click" />
             </MenuItem>
             <MenuItem Header="_Sobre"/>
         </Menu>

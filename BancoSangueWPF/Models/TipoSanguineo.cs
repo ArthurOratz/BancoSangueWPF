@@ -11,5 +11,10 @@ namespace BancoSangueWPF.Models
         public string Fator_RH { get; set; }
 
         public string Tipo_sanguineo { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Tipo_sanguineo} {Fator_RH}";
+        }
     }
 }

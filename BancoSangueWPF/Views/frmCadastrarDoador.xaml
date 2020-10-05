@@ -5,12 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BancoSangueWPF.Views"
         mc:Ignorable="d"
-        Title="Cadastro De Doador" Height="253" Width="406" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Padding="15,15,15,15">
+        Title="Cadastro De Doador" Height="496" Width="798" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Padding="15,15,15,15" FontSize="16" FontWeight="Medium" Loaded="Window_Loaded">
     <Grid>
-      
-        <TextBox x:Name="txt1" HorizontalAlignment="Center" Margin="0,30,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txt2" HorizontalAlignment="Center" Margin="0,69,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5"/>
-        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="98,118,0,0" VerticalAlignment="Top" Click="btnSalvar_Click"/>
-
+        <Label Content="Dados do Doador" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Id:" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top"/>
+        <Label Content="CPF:" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top"/>
+        <Label Content="Telefone:" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <Label Content="Criado em:" HorizontalAlignment="Left" Margin="11,77,0,0" VerticalAlignment="Top"/>
+        <Label Content="Peso:" HorizontalAlignment="Left" Margin="11,300,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tipo Sanguineo:" HorizontalAlignment="Left" Margin="11,331,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="114,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" IsEnabled="False"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="114,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="0"/>
+        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Margin="114,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" TabIndex="1"/>
+        <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Margin="114,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="2"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="114,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="231" TabIndex="3"/>
+        <TextBox x:Name="txtCriadoEm" HorizontalAlignment="Left" Margin="115,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtPeso" HorizontalAlignment="Left" Margin="115,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" TabIndex="5"/>
+        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="179,409,0,0" VerticalAlignment="Top" Click="btnCadastrar_Click" TabIndex="8" Width="81" Height="24" />
+        <Label Content="Sexo:" HorizontalAlignment="Left" Margin="11,261,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="292,155,0,0" VerticalAlignment="Top" Click="btnBuscar_Click"/>
+        <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="265,409,0,0" VerticalAlignment="Top" TabIndex="8" Width="81" Height="24" Click="btnLimpar_Click" />
+        <Button x:Name="btnRemover" Content="Remover" HorizontalAlignment="Left" Margin="93,409,0,0" VerticalAlignment="Top"  TabIndex="8" Width="81" Height="24" Click="btnRemover_Click" />
+        <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="8,409,0,0" VerticalAlignment="Top"  TabIndex="8" Width="81" Height="24" Click="btnAlterar_Click"  />
+        <ComboBox x:Name="cboSexo" HorizontalAlignment="Left" Margin="115,261,0,0" VerticalAlignment="Top" Width="229"/>
+        <ComboBox x:Name="cboTipoSanguineo" HorizontalAlignment="Left" Margin="143,335,0,0" VerticalAlignment="Top" Width="201"/>
     </Grid>
 </Window>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\App.xaml
-2206848182
+6-1606826946
 
-141064218746
+39-521257004
 217-46718395
-Views\frmCadastrarDoador.xaml;Views\frmPrincipal.xaml;
+Views\frmCadastrarDoador.xaml;Views\frmCadastrarFuncionario.xaml;Views\frmCadastroHospital.xaml;Views\frmColeta.xaml;Views\frmPrincipal.xaml;Views\frmRetirada.xaml;
 
 False
 

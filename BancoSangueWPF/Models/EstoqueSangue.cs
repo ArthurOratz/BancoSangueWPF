@@ -5,11 +5,12 @@ using System.Text;
 
 namespace BancoSangueWPF.Models
 {
-    [Table("Doador")]
-    class Doardor : Pessoa
+    [Table("EstoqueSangue")]
+    class EstoqueSangue:BaseModel
     {
-        public string Tipo_sanguineo { get; set; }
+        public TipoSanguineo TipoSanguineo { get; set; }
 
-        public int Peso { get; set; }
+        public int Quantidade { get; set; }
+
     }
 }

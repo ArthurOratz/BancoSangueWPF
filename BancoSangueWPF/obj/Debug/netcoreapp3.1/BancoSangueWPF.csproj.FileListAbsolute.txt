@@ -57,3 +57,11 @@ C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\bin\Debug\netcoreapp3.
 C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\BancoSangueWPF.csproj.CoreCompileInputs.cache
 C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\BancoSangueWPF.csproj.CopyComplete
+C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\Views\frmCadastrarFuncionario.g.cs
+C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\Views\frmCadastroHospital.g.cs
+C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\Views\frmCadastrarFuncionario.baml
+C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\Views\frmCadastroHospital.baml
+C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\Views\frmColeta.g.cs
+C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\Views\frmRetirada.g.cs
+C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\Views\frmColeta.baml
+C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\Views\frmRetirada.baml

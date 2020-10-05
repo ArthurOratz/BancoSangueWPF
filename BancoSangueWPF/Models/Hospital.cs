@@ -6,14 +6,21 @@ using System.Text;
 namespace BancoSangueWPF.Models
 {
     [Table("Hospital")]
-    class Hospital:BaseModel
+    class Hospital : BaseModel
     {
-        public string Nome_hospital { get; set; }
+        public Hospital()
+        {
+            CriadoEm = DateTime.Now;
+        }
+
+        public string Nome { get; set; }
 
         public string Endereco { get; set; }
 
-        public int Telefone { get; set; }
+        public string Telefone { get; set; }
 
-        public string Nome_responsavel { get; set; }
+        public string NomeResponsavel { get; set; }
+
+        public List<Retirada> ListaRetiradas { get; set; }
     }
 }
