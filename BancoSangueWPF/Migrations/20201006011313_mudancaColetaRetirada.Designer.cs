@@ -4,14 +4,16 @@ using BancoSangueWPF.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BancoSangueWPF.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class BancoSangueContextModelSnapshot : ModelSnapshot
+    [Migration("20201006011313_mudancaColetaRetirada")]
+    partial class mudancaColetaRetirada
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

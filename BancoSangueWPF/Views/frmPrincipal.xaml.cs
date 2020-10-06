@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BancoSangueWPF.DAL;
+using BancoSangueWPF.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +23,7 @@ namespace BancoSangueWPF.Views
         {
             InitializeComponent();
         }
+        List<EstoqueSangue> listaEstoque = new List<EstoqueSangue>();
 
         private void menuSair_Click(object sender, RoutedEventArgs e)
         {
@@ -56,14 +59,30 @@ namespace BancoSangueWPF.Views
 
         private void menuRetirada_Click(object sender, RoutedEventArgs e)
         {
-            frmColeta frm = new frmColeta();
+            frmRetirada frm = new frmRetirada();
             frm.ShowDialog();
         }
 
         private void menuColeta_Click(object sender, RoutedEventArgs e)
         {
-            frmRetirada frm = new frmRetirada();
+            frmColeta frm = new frmColeta();
             frm.ShowDialog();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            listaEstoque = EstoqueSangueDAO.Listar();
+            dtaEstoqueSangue.ItemsSource = listaEstoque;
+        }
+
+        private void PopularDataGrid(EstoqueSangue estoque)
+        {
+            dynamic item = new
+            {
+                TipoSanguineo = estoque.TipoSanguineo,
+                Quantidade = estoque.Quantidade
+            };
+            listaEstoque.Add(item);
         }
     }
 }

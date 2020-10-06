@@ -108,7 +108,7 @@ namespace BancoSangueWPF.Views
             }
             else
             {
-                _messageBoxClass.MensagemErroOK("Preencha o campo CPF!!!");
+                _messageBoxClass.MensagemErroOK("Preencha o campo Nome!!!");
             }
         }
 

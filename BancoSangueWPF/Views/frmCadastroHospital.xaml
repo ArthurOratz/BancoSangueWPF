@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BancoSangueWPF.Views"
         mc:Ignorable="d"
-        Title="Cadastro de Hospitais" Height="450" Width="800">
+        Title="Cadastro de Hospitais" Height="334" Width="395" WindowStartupLocation="CenterOwner" WindowStyle="ThreeDBorderWindow">
     <Grid>
         <Label Content="Dados do Hospital" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Id:" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top"/>
@@ -15,13 +15,13 @@
         <Label Content="Telefone:" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top"/>
         <Label Content="Nome do Responsavel:" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="114,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" IsEnabled="False"/>
-        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="114,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="0"/>
-        <TextBox x:Name="txtEndereco" HorizontalAlignment="Left" Margin="114,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" TabIndex="1"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="114,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" TabIndex="0"/>
+        <TextBox x:Name="txtEndereco" HorizontalAlignment="Left" Margin="114,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="1"/>
         <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Margin="114,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="2"/>
-        <TextBox x:Name="txtNomeResponsavel" HorizontalAlignment="Left" Margin="114,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="3"/>
+        <TextBox x:Name="txtNomeResponsavel" HorizontalAlignment="Left" Margin="146,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" TabIndex="3"/>
         <TextBox x:Name="txtCriadoEm" HorizontalAlignment="Left" Margin="115,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
         <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="181,250,0,0" VerticalAlignment="Top" Click="btnCadastrar_Click" TabIndex="8" Width="81" Height="24" />
-        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="292,155,0,0" VerticalAlignment="Top" Click="btnBuscar_Click"/>
+        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="306,119,0,0" VerticalAlignment="Top" Click="btnBuscar_Click"/>
         <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="267,250,0,0" VerticalAlignment="Top" TabIndex="8" Width="81" Height="24" Click="btnLimpar_Click" />
         <Button x:Name="btnRemover" Content="Remover" HorizontalAlignment="Left" Margin="95,250,0,0" VerticalAlignment="Top"  TabIndex="8" Width="81" Height="24" Click="btnRemover_Click" />
         <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top"  TabIndex="8" Width="81" Height="24" Click="btnAlterar_Click"  />

@@ -41,6 +41,6 @@ namespace BancoSangueWPF.DAL
 
         public static List<Doador> Listar() => _context.Doador.ToList();
 
-        public static Doador BuscarPorId(int id) => _context.Doador.Find(id);
+        public static Doador BuscarPorId(int id) => _context.Doador.FirstOrDefault(x => x.Id == id);
     }
 }

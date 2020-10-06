@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BancoSangueWPF.Views"
         mc:Ignorable="d"
-        Title="frmColeta" Height="450" Width="800">
+        Title="Coleta" Height="291" Width="240" Loaded="Window_Loaded" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterOwner">
     <Grid>
-        
+        <Label Content="Dados da Coleta" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Data:" HorizontalAlignment="Left" Margin="20,55,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtData" HorizontalAlignment="Left" Margin="62,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" TabIndex="1" IsEnabled="False"/>
+        <Label Content="Funcionario:" HorizontalAlignment="Left" Margin="16,100,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboFuncionario" HorizontalAlignment="Left" Margin="96,104,0,0" VerticalAlignment="Top" Width="120" TabIndex="0"/>
+        <Label Content="Doador:" HorizontalAlignment="Left" Margin="16,131,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboDoador" HorizontalAlignment="Left" Margin="96,133,0,0" VerticalAlignment="Top" Width="120" TabIndex="1" SelectionChanged="cboDoador_SelectionChanged"/>
+        <Label Content="Tipo Sanguineo:" HorizontalAlignment="Left" Margin="16,160,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTipoSanguineo" HorizontalAlignment="Left" Margin="116,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" TabIndex="3" IsEnabled="False" Text=""/>
+        <Label Content="Quantidade:" HorizontalAlignment="Left" Margin="16,191,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtQuantidade" HorizontalAlignment="Left" Margin="96,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="3"/>
+        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="121,222,0,0" VerticalAlignment="Top" TabIndex="5" Width="95" Height="24" Click="btnCadastrar_Click" />
+        <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="19,222,0,0" VerticalAlignment="Top" TabIndex="4" Width="96" Height="24" Click="btnLimpar_Click"  />
+
     </Grid>
 </Window>

@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BancoSangueWPF.Views"
         mc:Ignorable="d"
-        Title="frmRetirada" Height="450" Width="800">
+        Title="Retirada" Height="337" Width="291" WindowStartupLocation="CenterOwner" WindowStyle="ThreeDBorderWindow">
     <Grid>
-        
+        <Label Content="Dados da Retirada" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Data:" HorizontalAlignment="Left" Margin="20,55,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtData" HorizontalAlignment="Left" Margin="62,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" TabIndex="1" IsEnabled="False"/>
+        <Label Content="Hospital:" HorizontalAlignment="Left" Margin="16,100,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboHospital" HorizontalAlignment="Left" Margin="96,104,0,0" VerticalAlignment="Top" Width="120" TabIndex="0"/>
+        <Label Content="Tipo Sanguineo:" HorizontalAlignment="Left" Margin="17,136,0,0" VerticalAlignment="Top"/>
+        <Label Content="Quantidade:" HorizontalAlignment="Left" Margin="17,167,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtQuantidade" HorizontalAlignment="Left" Margin="97,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="3"/>
+        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="122,198,0,0" VerticalAlignment="Top" TabIndex="5" Width="95" Height="24" Click="btnCadastrar_Click" />
+        <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="20,198,0,0" VerticalAlignment="Top" TabIndex="4" Width="96" Height="24" Click="btnLimpar_Click"  />
+        <ComboBox x:Name="cboTipoSanguineo" HorizontalAlignment="Left" Margin="117,140,0,0" VerticalAlignment="Top" Width="100" TabIndex="0"/>
+
     </Grid>
 </Window>
