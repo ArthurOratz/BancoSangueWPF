@@ -1,4 +1,5 @@
 ﻿using BancoSangueWPF.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,9 @@ namespace BancoSangueWPF.DAL
         {
             if(BuscarPorCPF(doador.Cpf) == null)
             {
-                _context.Add(doador);
+                _context.Doador.Add(doador);                
                 _context.SaveChanges();
+
                 return true;
             }
             return false;

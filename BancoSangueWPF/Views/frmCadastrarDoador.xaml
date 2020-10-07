@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BancoSangueWPF.Views"
         mc:Ignorable="d"
-        Title="Cadastro De Doador" Height="480" Width="408" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Padding="15,15,15,15" FontSize="16" FontWeight="Medium" Loaded="Window_Loaded">
+        Title="Cadastro De Doador" Height="540" Width="472" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Padding="15,15,15,15" FontSize="16" FontWeight="Medium" Loaded="Window_Loaded">
     <Grid>
         <Label Content="Dados do Doador" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Id:" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top"/>
         <Label Content="Nome:" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top"/>
         <Label Content="CPF:" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top"/>
         <Label Content="Telefone:" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="11,225,0,0" VerticalAlignment="Top"/>
         <Label Content="Criado em:" HorizontalAlignment="Left" Margin="11,77,0,0" VerticalAlignment="Top"/>
         <Label Content="Peso:" HorizontalAlignment="Left" Margin="11,300,0,0" VerticalAlignment="Top"/>
         <Label Content="Tipo Sanguineo:" HorizontalAlignment="Left" Margin="11,331,0,0" VerticalAlignment="Top"/>
@@ -20,7 +20,7 @@
         <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="114,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="0"/>
         <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Margin="114,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" TabIndex="1"/>
         <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Margin="114,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="2"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="114,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="231" TabIndex="3"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="115,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="3"/>
         <TextBox x:Name="txtCriadoEm" HorizontalAlignment="Left" Margin="115,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
         <TextBox x:Name="txtPeso" HorizontalAlignment="Left" Margin="115,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" TabIndex="5"/>
         <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="179,409,0,0" VerticalAlignment="Top" Click="btnCadastrar_Click" TabIndex="8" Width="81" Height="24" />

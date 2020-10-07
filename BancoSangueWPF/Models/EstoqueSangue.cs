@@ -8,7 +8,7 @@ namespace BancoSangueWPF.Models
     [Table("EstoqueSangue")]
     class EstoqueSangue:BaseModel
     {
-        public TipoSanguineo TipoSanguineo { get; set; }
+        public int TipoSanguineoID { get; set; }
 
         public int Quantidade { get; set; }
 

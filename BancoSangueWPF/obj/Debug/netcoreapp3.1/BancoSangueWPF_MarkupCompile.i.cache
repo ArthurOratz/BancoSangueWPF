@@ -1,20 +1,20 @@
 ﻿BancoSangueWPF
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\
+C:\Users\FASO\source\repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\
 BancoSangueWPF
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoSangueWPF\App.xaml
+C:\Users\FASO\source\repos\BancoSangueWPF\BancoSangueWPF\App.xaml
 6-1606826946
 
-44531340829
-217-46718395
+4596700301
+217-8497442
 Views\frmCadastrarDoador.xaml;Views\frmCadastrarFuncionario.xaml;Views\frmCadastroHospital.xaml;Views\frmColeta.xaml;Views\frmPrincipal.xaml;Views\frmRetirada.xaml;
 
-False
+True
 

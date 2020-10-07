@@ -51,7 +51,7 @@ namespace BancoSangueWPF.Views
                 doador.Email = txtEmail.Text;
                 doador.Sexo = (string)cboSexo.SelectedValue;
                 doador.Peso = Convert.ToDouble(txtPeso.Text);
-                doador.TipoSanguineo = (TipoSanguineo)cboTipoSanguineo.SelectedValue;
+                doador.TipoSanguineoID = ((BancoSangueWPF.Models.BaseModel)cboTipoSanguineo.SelectedValue).Id;
 
                 //doador.TipoSanguineo.Fator_RH = txtRh.Text;
                 //doador.TipoSanguineo.Tipo_sanguineo = txtTipoSanguineo.Text;
@@ -113,7 +113,7 @@ namespace BancoSangueWPF.Views
                     cboSexo.SelectedValue = doador.Sexo;
                     txtPeso.Text = doador.Peso.ToString();
 
-                    cboTipoSanguineo.SelectedValue = doador.TipoSanguineo;
+                    cboTipoSanguineo.SelectedValue = TipoSanguineoDAO.BuscarPorId(doador.TipoSanguineoID);
                     //txtRh.Text = doador.TipoSanguineo.Fator_RH;
                 }
                 else
@@ -157,7 +157,7 @@ namespace BancoSangueWPF.Views
                 doador.Email = txtEmail.Text;
                 doador.Sexo = (string)cboSexo.SelectedValue;
                 doador.Peso = Convert.ToDouble(txtPeso.Text);
-                doador.TipoSanguineo = (TipoSanguineo)cboTipoSanguineo.SelectedValue;
+                doador.TipoSanguineoID = ((BancoSangueWPF.Models.BaseModel)cboTipoSanguineo.SelectedValue).Id;
                 //doador.TipoSanguineo.Tipo_sanguineo = txtTipoSanguineo.Text;
                 DoadorDAO.Alterar(doador);
                 _messageBoxClass.MensagemInfoOK("Doador Alterado!");

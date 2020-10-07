@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BancoSangueWPF.Views"
         mc:Ignorable="d"
-        Title="Retirada" Height="337" Width="291" WindowStartupLocation="CenterOwner" WindowStyle="ThreeDBorderWindow">
+        Title="Retirada" Height="319" Width="305" WindowStartupLocation="CenterOwner" WindowStyle="ThreeDBorderWindow" Loaded="Window_Loaded">
     <Grid>
         <Label Content="Dados da Retirada" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Data:" HorizontalAlignment="Left" Margin="20,55,0,0" VerticalAlignment="Top"/>

@@ -38,22 +38,31 @@ namespace BancoSangueWPF.Views
                 Retirada retirada = new Retirada();
 
                 //int idHospital = (int)cboHospital.SelectedValue;
-                retirada.Hospital = HospitalDAO.BuscarPorId((int)cboHospital.SelectedValue);
-                retirada.TipoSanguineo = (TipoSanguineo)cboHospital.SelectedValue;
+                retirada.HospitalID =(int)cboHospital.SelectedValue;
+                var tipoSanguineo = (TipoSanguineo)cboTipoSanguineo.SelectedValue;
+                retirada.TipoSanguineoID = tipoSanguineo.Id;
 
                 //coleta.TipoSanguineo = coleta.Doador.TipoSanguineo;
                 retirada.Quantidade = Convert.ToInt32(txtQuantidade.Text);
 
-                if (RetiradaDAO.Cadastrar(retirada))
+                var estoque = EstoqueSangueDAO.BuscarPorTipoSanguineo(retirada.TipoSanguineoID);
+                if ((estoque.Quantidade - retirada.Quantidade) > 0)
                 {
-                    var teste = EstoqueSangueDAO.BuscarPorTipoSanguineo(retirada.TipoSanguineo);
+                    if (RetiradaDAO.Cadastrar(retirada))
+                    {
+                        EstoqueSangueDAO.DiminuirEstoque(retirada.TipoSanguineoID, retirada.Quantidade);
 
-                    _messageBoxClass.MensagemInfoOK("Retirada Salva!");
-                    LimparForm();
+                        _messageBoxClass.MensagemInfoOK("Retirada Salva!");
+                        LimparForm();
+                    }
+                    else
+                    {
+                        _messageBoxClass.MensagemErroOK("Retirada ja cadastrada!");
+                    }
                 }
                 else
                 {
-                    _messageBoxClass.MensagemErroOK("Retirada ja cadastrada!");
+                    _messageBoxClass.MensagemErroOK("Quantidade Solicitada Indisponivel!");
                 }
             }
             else
@@ -69,13 +78,15 @@ namespace BancoSangueWPF.Views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            txtData.Text = DateTime.Now.ToString();
+
+            cboTipoSanguineo.ItemsSource = TipoSanguineoDAO.Listar();
+
             cboHospital.ItemsSource = HospitalDAO.Listar();
             cboHospital.DisplayMemberPath = "Nome";
             cboHospital.SelectedValuePath = "Id";
 
-            cboTipoSanguineo.ItemsSource = TipoSanguineoDAO.Listar();
 
-            txtData.Text = DateTime.Now.ToString();
 
         }
         private void LimparForm()
@@ -86,5 +97,6 @@ namespace BancoSangueWPF.Views
             cboTipoSanguineo.SelectedIndex = -1;
             txtQuantidade.Clear();
         }
+
     }
 }

@@ -23,11 +23,25 @@ namespace BancoSangueWPF.DAL
 
         public static EstoqueSangue BuscarPorId(int id) => _context.EstoqueSangue.Find(id);
 
-        public static EstoqueSangue BuscarPorTipoSanguineo(TipoSanguineo tipoSanguineo) => _context.EstoqueSangue.Find(tipoSanguineo);
+        public static EstoqueSangue BuscarPorTipoSanguineo(int tipoSanguineoID) => _context.EstoqueSangue.FirstOrDefault(c => c.TipoSanguineoID == tipoSanguineoID);
 
 
-        public static void AumentaEstoque(TipoSanguineo tipoSanguineo, int quantidade)
+        public static void AumentaEstoque(int tipoSanguineoID, int quantidade)
         {
+            var estoque = BuscarPorTipoSanguineo(tipoSanguineoID);
+            estoque.Quantidade += quantidade;
+
+            _context.Update(estoque);
+            _context.SaveChanges();
+        }
+
+        public static void DiminuirEstoque(int tipoSanguineoID, int quantidade)
+        {
+            var estoque = BuscarPorTipoSanguineo(tipoSanguineoID);
+
+            estoque.Quantidade -= quantidade;
+            _context.Update(estoque);
+            _context.SaveChanges();
 
         }
 
