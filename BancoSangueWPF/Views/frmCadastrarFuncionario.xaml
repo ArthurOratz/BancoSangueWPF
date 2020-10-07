@@ -19,7 +19,7 @@
         <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Margin="114,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" TabIndex="1"/>
         <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Margin="114,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="2"/>
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="114,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="3"/>
-        <TextBox x:Name="txtCriadoEm" HorizontalAlignment="Left" Margin="115,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtCriadoEm" HorizontalAlignment="Left" Margin="115,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" IsEnabled="False"/>
         <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="181,250,0,0" VerticalAlignment="Top" Click="btnCadastrar_Click" TabIndex="8" Width="81" Height="24" />
         <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="292,155,0,0" VerticalAlignment="Top" Click="btnBuscar_Click"/>
         <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="267,250,0,0" VerticalAlignment="Top" TabIndex="8" Width="81" Height="24" Click="btnLimpar_Click" />

@@ -21,7 +21,7 @@
         <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Margin="114,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" TabIndex="1"/>
         <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Margin="114,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="2"/>
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="115,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TabIndex="3"/>
-        <TextBox x:Name="txtCriadoEm" HorizontalAlignment="Left" Margin="115,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtCriadoEm" HorizontalAlignment="Left" Margin="116,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" IsEnabled="False"/>
         <TextBox x:Name="txtPeso" HorizontalAlignment="Left" Margin="115,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" TabIndex="5"/>
         <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="179,409,0,0" VerticalAlignment="Top" Click="btnCadastrar_Click" TabIndex="8" Width="81" Height="24" />
         <Label Content="Sexo:" HorizontalAlignment="Left" Margin="11,261,0,0" VerticalAlignment="Top"/>
