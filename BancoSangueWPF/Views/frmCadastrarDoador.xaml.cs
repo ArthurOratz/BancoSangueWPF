@@ -46,6 +46,7 @@ namespace BancoSangueWPF.Views
                 Doador doador = new Doador();
 
                 doador.Nome = txtNome.Text;
+                doador.Sobrenome = txtSobrenome.Text;
                 doador.Cpf = txtCpf.Text;
                 doador.Telefone = txtTelefone.Text;
                 doador.Email = txtEmail.Text;
@@ -77,6 +78,7 @@ namespace BancoSangueWPF.Views
             txtId.Clear();
             txtCriadoEm.Clear();
             txtNome.Clear();
+            txtSobrenome.Clear();
             txtCpf.Clear();
             txtTelefone.Clear();
             txtEmail.Clear();
@@ -107,6 +109,7 @@ namespace BancoSangueWPF.Views
                     txtId.Text = doador.Id.ToString();
                     txtCriadoEm.Text = doador.CriadoEm.ToString();
                     txtNome.Text = doador.Nome;
+                    txtSobrenome.Text = doador.Sobrenome;
                     txtCpf.Text = doador.Cpf;
                     txtTelefone.Text = doador.Telefone;
                     txtEmail.Text = doador.Email;
@@ -152,6 +155,7 @@ namespace BancoSangueWPF.Views
             if (doador != null)
             {
                 doador.Nome = txtNome.Text;
+                doador.Sobrenome = txtSobrenome.Text;
                 doador.Cpf = txtCpf.Text;
                 doador.Telefone = txtTelefone.Text;
                 doador.Email = txtEmail.Text;

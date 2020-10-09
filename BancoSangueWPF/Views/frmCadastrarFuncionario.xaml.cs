@@ -45,6 +45,7 @@ namespace BancoSangueWPF.Views
                 Funcionario funcionario = new Funcionario();
 
                 funcionario.Nome = txtNome.Text;
+                funcionario.Sobrenome = txtSobrenome.Text;
                 funcionario.Cpf = txtCpf.Text;
                 funcionario.Telefone = txtTelefone.Text;
                 funcionario.Email = txtEmail.Text;
@@ -71,6 +72,7 @@ namespace BancoSangueWPF.Views
             txtId.Clear();
             txtCriadoEm.Clear();
             txtNome.Clear();
+            txtSobrenome.Clear();
             txtCpf.Clear();
             txtTelefone.Clear();
             txtEmail.Clear();
@@ -95,6 +97,8 @@ namespace BancoSangueWPF.Views
                     txtId.Text = funcionario.Id.ToString();
                     txtCriadoEm.Text = funcionario.CriadoEm.ToString();
                     txtNome.Text = funcionario.Nome;
+                    txtSobrenome.Text = funcionario.Sobrenome;
+
                     txtCpf.Text = funcionario.Cpf;
                     txtTelefone.Text = funcionario.Telefone;
                     txtEmail.Text = funcionario.Email;
@@ -136,6 +140,7 @@ namespace BancoSangueWPF.Views
             if (funcionario != null)
             {
                 funcionario.Nome = txtNome.Text;
+                funcionario.Sobrenome = txtSobrenome.Text;
                 funcionario.Cpf = txtCpf.Text;
                 funcionario.Telefone = txtTelefone.Text;
                 funcionario.Email = txtEmail.Text;

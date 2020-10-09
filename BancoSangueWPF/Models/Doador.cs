@@ -12,7 +12,6 @@ namespace BancoSangueWPF.Models
         {
             CriadoEm = DateTime.Now;
         }
-
         public int TipoSanguineoID { get; set; }
 
         public double Peso { get; set; }
