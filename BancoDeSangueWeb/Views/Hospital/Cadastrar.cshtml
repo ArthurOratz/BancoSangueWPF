@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastrar Hospital</title>
+</head>
+<body>
+    <h2>CADASTRO DE HOSPITAL</h2>
+    <br /><br />
+    <form asp-action="Cadastrar" asp-controller="Hospital"method="post">
+        <label>Nome:</label>
+        <input name="Nome" type="text" placeholder="Nome do Hospital" />
+        <br />
+        <label>Endereço:</label>
+        <input name="Endereco" type="text" placeholder="Endereço do Hospital" />
+        <br />
+        <label>Responsavel:</label>
+        <input name="Responsavel" type="text" placeholder="Responsavel pelo Hospital" />
+        <br />
+        <input type="submit" value="Cadastrar" />
+    </form>
+</body>
+</html>

@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banco_de_Sangue", "Banco_de_Sangue\Banco_de_Sangue.csproj", "{395B96B3-95DC-4618-8B2F-1401740A3A58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoSangueWPF", "BancoSangueWPF\BancoSangueWPF.csproj", "{884C012F-ECB1-47F2-B3AC-D524871B35F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BancoSangueWPF", "BancoSangueWPF\BancoSangueWPF.csproj", "{884C012F-ECB1-47F2-B3AC-D524871B35F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoDeSangueWeb", "BancoDeSangueWeb\BancoDeSangueWeb.csproj", "{709620CA-D442-4493-99EB-681FE9D8C261}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{884C012F-ECB1-47F2-B3AC-D524871B35F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{884C012F-ECB1-47F2-B3AC-D524871B35F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{884C012F-ECB1-47F2-B3AC-D524871B35F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{709620CA-D442-4493-99EB-681FE9D8C261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{709620CA-D442-4493-99EB-681FE9D8C261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{709620CA-D442-4493-99EB-681FE9D8C261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{709620CA-D442-4493-99EB-681FE9D8C261}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
