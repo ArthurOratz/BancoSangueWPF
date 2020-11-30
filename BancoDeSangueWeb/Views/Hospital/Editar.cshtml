@@ -1,0 +1,36 @@
+﻿@{
+    Hospital hospital = ViewBag.Hospital; 
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar Hospital</title>
+</head>
+<body>
+    <h2>EDIÇÃO DE HOSPITAL</h2>
+    <br /><br />
+    <form asp-action="Editar" asp-controller="Hospital"method="post">
+        <fieldset>
+            <legend>Editar Produto</legend>
+
+            @*<label for="Id">Id:</label>
+            <input value="@hospital.Id" readonly name="Id" type="text" placeholder="Id do Hospital" />*@
+            <input value="@hospital.Id" name="Id" type="hidden"/>
+            <br />
+            <label for="Nome">Nome:</label>
+            <input value="@hospital.Nome" name="Nome" type="text" placeholder="Nome do Hospital" />
+            <br />
+            <label for="Endereço">Endereço:</label>
+            <input value="@hospital.Endereco" name="Endereco" type="text" placeholder="Endereço do Hospital" />
+            <br />
+            <label>Responsavel:</label>
+            <input value="@hospital.Nome_Responsavel" name="Responsavel" type="text" placeholder="Responsavel pelo Hospital" />
+            <br />
+            <input type="submit" value="Salvar" />
+        </fieldset>
+            </form>
+</body>
+</html>

@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    List<Hospital> listaHospitais = ViewBag.ListaHospitais;
+}
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -7,5 +11,42 @@
 <body>
     <h2>Gerenciamento dos Hospitais</h2>
     <a asp-action="Cadastrar" asp-controller="Hospital">Cadastrar Hospital</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Criado em</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var hospital in listaHospitais)
+            {
+            <tr>
+                <td>@hospital.Id</td>
+                <td>@hospital.Nome</td>
+                <td>@hospital.Telefone</td>
+                <td>@hospital.Endereco</td>
+                <td>@hospital.CriadoEm.ToShortDateString()</td>
+                <td>
+                    <a asp-action="Remover" asp-controller="Hospital" asp-route-id="@hospital.Id">Remover</a>
+                </td>
+                <td>
+                <a asp-action="Editar" asp-controller="Hospital" asp-route-id="@hospital.Id">Editar</a>
+                </td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <span><b>Quantidade de itens: </b> @listaHospitais.Count </span>
+    <br />
+    <span><b>Dados Atualizados: </b> @DateTime.Now </span>
 </body>
 </html>

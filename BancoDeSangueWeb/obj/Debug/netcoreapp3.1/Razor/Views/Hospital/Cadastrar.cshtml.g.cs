@@ -12,8 +12,22 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoDeSangueWeb\Views\_ViewImports.cshtml"
+using BancoDeSangueWeb;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\arthu\Source\Repos\BancoSangueWPF\BancoDeSangueWeb\Views\_ViewImports.cshtml"
+using BancoDeSangueWeb.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fac88400e5a19a018c5b6c59877d04c4aed511b1", @"/Views/Hospital/Cadastrar.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"897a3bb9dad2e33dcad372550606759fcdffc84f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea63a32019ce0bd3540ce1cb3defc83a556682a4", @"/Views/_ViewImports.cshtml")]
     public class Views_Hospital_Cadastrar : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Cadastrar", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -47,7 +61,7 @@ namespace AspNetCore
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fac88400e5a19a018c5b6c59877d04c4aed511b14103", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fac88400e5a19a018c5b6c59877d04c4aed511b14492", async() => {
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Cadastrar Hospital</title>\r\n");
             }
             );
@@ -61,9 +75,9 @@ namespace AspNetCore
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fac88400e5a19a018c5b6c59877d04c4aed511b15175", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fac88400e5a19a018c5b6c59877d04c4aed511b15564", async() => {
                 WriteLiteral("\r\n    <h2>CADASTRO DE HOSPITAL</h2>\r\n    <br /><br />\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fac88400e5a19a018c5b6c59877d04c4aed511b15494", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fac88400e5a19a018c5b6c59877d04c4aed511b15883", async() => {
                     WriteLiteral(@"
         <label>Nome:</label>
         <input name=""Nome"" type=""text"" placeholder=""Nome do Hospital"" />

@@ -141,7 +141,7 @@ namespace BancoSangueWPF.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BancoSangueWPF;V1.0.0.0;component/views/frmcadastrarfuncionario.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BancoSangueWPF;component/views/frmcadastrarfuncionario.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\frmCadastrarFuncionario.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

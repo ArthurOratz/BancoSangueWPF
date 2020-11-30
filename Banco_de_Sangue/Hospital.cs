@@ -12,15 +12,15 @@ namespace Banco_de_Sangue
         //Construtores
         public Hospital(int Id, string Nome, string Endereco, int Telefone, string Nome_responsavel)
         {
-            Id = Id;
+            this.Id = Id;
 
-            Nome_hospital = Nome_hospital;
+            this.Nome_hospital = Nome_hospital;
 
-            Endereco = Endereco;
+            this.Endereco = Endereco;
 
-            Telefone = Telefone;
+            this.Telefone = Telefone;
 
-            Nome_responsavel = Nome_responsavel;
+            this.Nome_responsavel = Nome_responsavel;
         }
 
         public Hospital()
