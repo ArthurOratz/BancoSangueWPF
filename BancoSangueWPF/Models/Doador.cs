@@ -11,14 +11,11 @@ namespace BancoSangueWPF.Models
         public Doador()
         {
             CriadoEm = DateTime.Now;
-
-            TipoSanguineo = new TipoSanguineo();
         }
-
-        public TipoSanguineo TipoSanguineo { get; set; }
+        public int TipoSanguineoID { get; set; }
 
         public double Peso { get; set; }
-        
+
         public string Sexo { get; set; }
 
         public List<Coleta> ListaColetas { get; set; }

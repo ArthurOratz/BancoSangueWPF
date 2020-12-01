@@ -8,6 +8,7 @@ namespace BancoSangueWPF.Models
     class Pessoa : BaseModel
     {
         public string Nome { get; set; }
+        public string Sobrenome { get; set; }
 
         public string Cpf { get; set; }
 

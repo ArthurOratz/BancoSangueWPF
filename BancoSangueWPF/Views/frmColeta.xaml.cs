@@ -44,18 +44,18 @@ namespace BancoSangueWPF.Views
 
                 int idFuncionario = (int)cboFuncionario.SelectedValue;
                 int idDoador = (int)cboDoador.SelectedValue;
-                coleta.Funcionario = FuncionarioDAO.BuscarPorId(idFuncionario);
-                coleta.Doador = DoadorDAO.BuscarPorId(idDoador);
+                coleta.FuncionarioID = idFuncionario;
+                coleta.DoadorID = idDoador;
 
                 //coleta.TipoSanguineo = (TipoSanguineo)cboTipoSanguineo.SelectedValue;
-                coleta.TipoSanguineo = coleta.Doador.TipoSanguineo;
+                var doador = DoadorDAO.BuscarPorId(coleta.DoadorID);
+                coleta.TipoSanguineoID = TipoSanguineoDAO.BuscarPorId(doador.TipoSanguineoID).Id;
                 coleta.Quantidade = Convert.ToInt32(txtQuantidade.Text);
 
                 if (ColetaDAO.Cadastrar(coleta))
                 {
-
-                    var teste = EstoqueSangueDAO.BuscarPorTipoSanguineo(coleta.TipoSanguineo);
-
+                    EstoqueSangueDAO.AumentaEstoque(coleta.TipoSanguineoID, coleta.Quantidade);
+                   
                     _messageBoxClass.MensagemInfoOK("Coleta Salva!");
                     LimparForm();
                 }
@@ -106,7 +106,7 @@ namespace BancoSangueWPF.Views
             {
                 var idDoador = (int)cboDoador.SelectedValue;
                 var doador = DoadorDAO.BuscarPorId(idDoador);
-                txtTipoSanguineo.Text = doador.TipoSanguineo.ToString();
+                txtTipoSanguineo.Text =   TipoSanguineoDAO.BuscarPorId(doador.TipoSanguineoID).ToString();
             }
         }
     }

@@ -22,8 +22,9 @@ namespace BancoSangueWPF.Views
         public frmPrincipal()
         {
             InitializeComponent();
+
         }
-        List<EstoqueSangue> listaEstoque = new List<EstoqueSangue>();
+        List<dynamic> listaEstoque = new List<dynamic>();
 
         private void menuSair_Click(object sender, RoutedEventArgs e)
         {
@@ -71,18 +72,32 @@ namespace BancoSangueWPF.Views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            listaEstoque = EstoqueSangueDAO.Listar();
+            listaEstoque = PopularDataGrid();
             dtaEstoqueSangue.ItemsSource = listaEstoque;
         }
 
-        private void PopularDataGrid(EstoqueSangue estoque)
+        private dynamic PopularDataGrid()
         {
-            dynamic item = new
+            var estoque = EstoqueSangueDAO.Listar();
+            foreach (var item in estoque)
             {
-                TipoSanguineo = estoque.TipoSanguineo,
-                Quantidade = estoque.Quantidade
-            };
-            listaEstoque.Add(item);
+
+                dynamic sangue = new
+                {
+                    TipoSanguineo = TipoSanguineoDAO.BuscarPorId(item.TipoSanguineoID),
+                    Quantidade = item.Quantidade
+                };
+                listaEstoque.Add(sangue);
+            }
+            return listaEstoque;
+        }
+
+        private void btnAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            listaEstoque = new List<dynamic>();
+            listaEstoque = PopularDataGrid();
+            dtaEstoqueSangue.ItemsSource = listaEstoque;
+            dtaEstoqueSangue.Items.Refresh();
         }
     }
 }

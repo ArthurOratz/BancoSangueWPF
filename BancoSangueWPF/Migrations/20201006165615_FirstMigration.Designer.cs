@@ -4,14 +4,16 @@ using BancoSangueWPF.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BancoSangueWPF.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class BancoSangueContextModelSnapshot : ModelSnapshot
+    [Migration("20201006165615_FirstMigration")]
+    partial class FirstMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,23 +34,25 @@ namespace BancoSangueWPF.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DoadorID")
+                    b.Property<int?>("DoadorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("FuncionarioID")
+                    b.Property<int?>("FuncionarioId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
-                    b.Property<int>("TipoSanguineoID")
+                    b.Property<int?>("TipoSanguineoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DoadorID");
+                    b.HasIndex("DoadorId");
 
-                    b.HasIndex("FuncionarioID");
+                    b.HasIndex("FuncionarioId");
+
+                    b.HasIndex("TipoSanguineoId");
 
                     b.ToTable("Coleta");
                 });
@@ -78,16 +82,15 @@ namespace BancoSangueWPF.Migrations
                     b.Property<string>("Sexo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Sobrenome")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Telefone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TipoSanguineoID")
+                    b.Property<int?>("TipoSanguineoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TipoSanguineoId");
 
                     b.ToTable("Doador");
                 });
@@ -105,10 +108,12 @@ namespace BancoSangueWPF.Migrations
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
-                    b.Property<int>("TipoSanguineoID")
+                    b.Property<int?>("TipoSanguineoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TipoSanguineoId");
 
                     b.ToTable("EstoqueSangue");
                 });
@@ -130,9 +135,6 @@ namespace BancoSangueWPF.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sobrenome")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefone")
@@ -183,18 +185,20 @@ namespace BancoSangueWPF.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("HospitalID")
+                    b.Property<int?>("HospitalId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
-                    b.Property<int>("TipoSanguineoID")
+                    b.Property<int?>("TipoSanguineoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("HospitalID");
+                    b.HasIndex("HospitalId");
+
+                    b.HasIndex("TipoSanguineoId");
 
                     b.ToTable("Retirada");
                 });
@@ -222,26 +226,42 @@ namespace BancoSangueWPF.Migrations
 
             modelBuilder.Entity("BancoSangueWPF.Models.Coleta", b =>
                 {
-                    b.HasOne("BancoSangueWPF.Models.Doador", null)
+                    b.HasOne("BancoSangueWPF.Models.Doador", "Doador")
                         .WithMany("ListaColetas")
-                        .HasForeignKey("DoadorID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DoadorId");
 
-                    b.HasOne("BancoSangueWPF.Models.Funcionario", null)
+                    b.HasOne("BancoSangueWPF.Models.Funcionario", "Funcionario")
                         .WithMany("ListaColetas")
-                        .HasForeignKey("FuncionarioID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("FuncionarioId");
+
+                    b.HasOne("BancoSangueWPF.Models.TipoSanguineo", "TipoSanguineo")
+                        .WithMany()
+                        .HasForeignKey("TipoSanguineoId");
+                });
+
+            modelBuilder.Entity("BancoSangueWPF.Models.Doador", b =>
+                {
+                    b.HasOne("BancoSangueWPF.Models.TipoSanguineo", "TipoSanguineo")
+                        .WithMany()
+                        .HasForeignKey("TipoSanguineoId");
+                });
+
+            modelBuilder.Entity("BancoSangueWPF.Models.EstoqueSangue", b =>
+                {
+                    b.HasOne("BancoSangueWPF.Models.TipoSanguineo", "TipoSanguineo")
+                        .WithMany()
+                        .HasForeignKey("TipoSanguineoId");
                 });
 
             modelBuilder.Entity("BancoSangueWPF.Models.Retirada", b =>
                 {
-                    b.HasOne("BancoSangueWPF.Models.Hospital", null)
+                    b.HasOne("BancoSangueWPF.Models.Hospital", "Hospital")
                         .WithMany("ListaRetiradas")
-                        .HasForeignKey("HospitalID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("HospitalId");
+
+                    b.HasOne("BancoSangueWPF.Models.TipoSanguineo", "TipoSanguineo")
+                        .WithMany()
+                        .HasForeignKey("TipoSanguineoId");
                 });
 #pragma warning restore 612, 618
         }

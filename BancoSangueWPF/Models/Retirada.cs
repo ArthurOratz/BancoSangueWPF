@@ -9,9 +9,9 @@ namespace BancoSangueWPF.Models
     [Table("Retirada")]
     class Retirada : BaseModel
     {
-        public Hospital Hospital { get; set; }
+        public int HospitalID { get; set; }
         public DateTime Data { get; set; }
-        public TipoSanguineo TipoSanguineo { get; set; }
+        public int TipoSanguineoID { get; set; }
         public int Quantidade { get; set; }
     }
 }

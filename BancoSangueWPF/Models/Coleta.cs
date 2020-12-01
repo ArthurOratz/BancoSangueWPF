@@ -6,12 +6,12 @@ namespace BancoSangueWPF.Models
     [Table("Coleta")]
     class Coleta : BaseModel
     {
-        public Doador Doador { get; set; }
+        public int DoadorID { get; set; }
 
-        public Funcionario Funcionario { get; set; }
+        public int FuncionarioID { get; set; }
 
         public DateTime Data { get; set; }
-        public TipoSanguineo TipoSanguineo { get; set; }
+        public int TipoSanguineoID { get; set; }
         public int Quantidade { get; set; }
     }
 }
