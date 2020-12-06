@@ -14,18 +14,23 @@ namespace BancoDeSangueWeb.DAL
 
         public List<Hospital> Listar() => _context.Hospital.ToList();
 
-        public Hospital BurcarPorId(int id) => _context.Hospital.Find(id);
-        public Hospital BurcarPorNome(string nome) => _context.Hospital.FirstOrDefault(c => c.Nome == nome);
+        public Hospital BuscarPorId(int id) => _context.Hospital.Find(id);
+        public Hospital BuscarPorNome(string nome) => _context.Hospital.FirstOrDefault(c => c.Nome == nome);
 
-        public void Cadastrar(Hospital hospital)
+        public bool Cadastrar(Hospital hospital)
         {
+            if (BuscarPorNome(hospital.Nome) == null)
+            {
             _context.Hospital.Add(hospital);
             _context.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         public void Remover(int id)
         {
-            _context.Hospital.Remove(BurcarPorId(id));
+            _context.Hospital.Remove(BuscarPorId(id));
             _context.SaveChanges();
         }
 

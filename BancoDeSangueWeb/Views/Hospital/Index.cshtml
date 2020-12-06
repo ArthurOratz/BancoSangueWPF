@@ -1,32 +1,24 @@
-﻿@{
-    List<Hospital> listaHospitais = ViewBag.ListaHospitais;
-}
+﻿@model List<Hospital>
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title>Gerenciamento dos Hospitais</title>
-</head>
-<body>
-    <h2>Gerenciamento dos Hospitais</h2>
-    <a asp-action="Cadastrar" asp-controller="Hospital">Cadastrar Hospital</a>
+<h3>Gerenciamento dos Hospitais</h3>
+<a class="btn btn-primary mg-10" asp-action="Cadastrar" asp-controller="Hospital">Cadastrar Hospital</a>
 
-    <table>
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th>Endereço</th>
-                <th>Criado em</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var hospital in listaHospitais)
-            {
+<table class="table table-hover table-striped mg-20">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th>Criado em</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hospital in Model)
+        {
             <tr>
                 <td>@hospital.Id</td>
                 <td>@hospital.Nome</td>
@@ -37,16 +29,13 @@
                     <a asp-action="Remover" asp-controller="Hospital" asp-route-id="@hospital.Id">Remover</a>
                 </td>
                 <td>
-                <a asp-action="Editar" asp-controller="Hospital" asp-route-id="@hospital.Id">Editar</a>
+                    <a asp-action="Editar" asp-controller="Hospital" asp-route-id="@hospital.Id">Editar</a>
                 </td>
 
             </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
 
-    <span><b>Quantidade de itens: </b> @listaHospitais.Count </span>
-    <br />
-    <span><b>Dados Atualizados: </b> @DateTime.Now </span>
-</body>
-</html>
+<p><b>Quantidade de itens: </b> @Model.Count </p>
+<p><b>Dados Atualizados: </b> @DateTime.Now </p>

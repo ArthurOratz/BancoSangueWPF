@@ -8526,11 +8526,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arthu\\Source\\Repos\\BancoSangueWPF\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj",
+      "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj",
       "projectName": "BancoDeSangueWeb",
-      "projectPath": "C:\\Users\\arthu\\Source\\Repos\\BancoSangueWPF\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj",
+      "projectPath": "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj",
       "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arthu\\Source\\Repos\\BancoSangueWPF\\BancoDeSangueWeb\\obj\\",
+      "outputPath": "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoDeSangueWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

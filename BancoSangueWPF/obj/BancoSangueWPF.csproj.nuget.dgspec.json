@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FASO\\source\\repos\\BancoSangueWPF\\BancoSangueWPF\\BancoSangueWPF.csproj": {}
+    "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoSangueWPF\\BancoSangueWPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FASO\\source\\repos\\BancoSangueWPF\\BancoSangueWPF\\BancoSangueWPF.csproj": {
+    "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoSangueWPF\\BancoSangueWPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FASO\\source\\repos\\BancoSangueWPF\\BancoSangueWPF\\BancoSangueWPF.csproj",
+        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoSangueWPF\\BancoSangueWPF.csproj",
         "projectName": "BancoSangueWPF",
-        "projectPath": "C:\\Users\\FASO\\source\\repos\\BancoSangueWPF\\BancoSangueWPF\\BancoSangueWPF.csproj",
-        "packagesPath": "C:\\Users\\FASO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FASO\\source\\repos\\BancoSangueWPF\\BancoSangueWPF\\obj\\",
+        "projectPath": "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoSangueWPF\\BancoSangueWPF.csproj",
+        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoSangueWPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\FASO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

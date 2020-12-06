@@ -17,23 +17,29 @@ namespace BancoDeSangueWeb.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.ListaHospitais = _hospitalDAO.Listar();
-            return View();
+            ViewBag.Title = "Lista de Hospitais";
+            return View(_hospitalDAO.Listar());
         }
 
-        public IActionResult Cadastrar() => View();
-        [HttpPost]
-        public IActionResult Cadastrar(string Nome, string Endereco, string Responsavel)
+        public IActionResult Cadastrar()
         {
-            Hospital hospital = new Hospital
-            {
-                Nome = Nome,
-                Endereco = Endereco,
-                Nome_Responsavel = Responsavel,
-            };
+            ViewBag.Title = "Cadastro de Hospital";
+         return View();
+        }
+        [HttpPost]
+        public IActionResult Cadastrar(Hospital hospital)
+        {
 
-            _hospitalDAO.Cadastrar(hospital);
-            return RedirectToAction("Index", "Hospital");
+            if (ModelState.IsValid)
+            {
+                if (_hospitalDAO.Cadastrar(hospital))
+                {
+                    return RedirectToAction("Index", "Hospital");
+                }
+                ModelState.AddModelError("", "Já existe um  hospital com esse nome cadastrado!");
+            }
+            return View(hospital);
+
         }
 
 
@@ -43,16 +49,22 @@ namespace BancoDeSangueWeb.Controllers
             return RedirectToAction("Index", "Hospital");
         }
 
-        [HttpPost]
-        public IActionResult Editar(int Id, string Nome, string Endereco, string responsavel)
+        public IActionResult Editar(int Id)
         {
-            Hospital hospital = _hospitalDAO.BurcarPorId(Id);
-            hospital.Nome = Nome;
-            hospital.Endereco = Endereco;
-            hospital.Nome_Responsavel = responsavel;
+            return View(_hospitalDAO.BuscarPorId(Id));
+        }
+        [HttpPost]
+        public IActionResult Editar(Hospital hospital)
+        {
+            if (ModelState.IsValid)
+            {
+                var oldHosp = _hospitalDAO.BuscarPorId(hospital.Id);
+                hospital.CriadoEm = oldHosp.CriadoEm;
+                _hospitalDAO.Editar(hospital);
+                //return View();
+            }
+            return RedirectToAction("Index", "Hospital");
 
-            _hospitalDAO.Editar(hospital);
-            return View();
         }
 
     }
