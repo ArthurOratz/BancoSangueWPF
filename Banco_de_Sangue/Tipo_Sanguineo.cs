@@ -12,12 +12,7 @@ namespace Banco_de_Sangue
         //Construtores
         public Tipo_Sanguineo(int Id, string Fator_RH, string tipo_sanguineo)
         {
-            Id = Id;
-
-            Fator_RH = Fator_RH;
-
-            Tipo_sanguineo = Tipo_sanguineo;
-
+     
         }
 
         public Tipo_Sanguineo()

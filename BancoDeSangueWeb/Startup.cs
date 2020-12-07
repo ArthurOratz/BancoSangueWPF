@@ -26,6 +26,10 @@ namespace BancoDeSangueWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<HospitalDAO>();
+            services.AddScoped<FuncionarioDAO>();
+            services.AddScoped<DoadorDAO>();
+            services.AddScoped<TipoSanguineoDAO>();
+            services.AddScoped<EstoqueSangueDAO>();
 
             services.AddDbContext<Context>
                 (options => options.UseSqlServer(
@@ -55,7 +59,7 @@ namespace BancoDeSangueWeb
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Hospital}/{action=Index}/{id?}");
+                    pattern: "{controller=Estoque}/{action=Index}/{id?}");
             });
         }
     }

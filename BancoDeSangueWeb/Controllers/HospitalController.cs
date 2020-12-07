@@ -26,6 +26,12 @@ namespace BancoDeSangueWeb.Controllers
             ViewBag.Title = "Cadastro de Hospital";
          return View();
         }
+
+        public IActionResult Editar(int Id)
+        {
+            return View(_hospitalDAO.BuscarPorId(Id));
+        }
+
         [HttpPost]
         public IActionResult Cadastrar(Hospital hospital)
         {
@@ -42,30 +48,28 @@ namespace BancoDeSangueWeb.Controllers
 
         }
 
-
-        public IActionResult Remover(int id)
-        {
-            _hospitalDAO.Remover(id);
-            return RedirectToAction("Index", "Hospital");
-        }
-
-        public IActionResult Editar(int Id)
-        {
-            return View(_hospitalDAO.BuscarPorId(Id));
-        }
         [HttpPost]
         public IActionResult Editar(Hospital hospital)
         {
             if (ModelState.IsValid)
             {
                 var oldHosp = _hospitalDAO.BuscarPorId(hospital.Id);
-                hospital.CriadoEm = oldHosp.CriadoEm;
-                _hospitalDAO.Editar(hospital);
+                //hospital.CriadoEm = oldHosp.CriadoEm;
+                oldHosp.Nome = hospital.Nome;
+                oldHosp.Telefone = hospital.Telefone;
+                oldHosp.Endereco= hospital.Endereco;
+                oldHosp.Telefone= hospital.Telefone;
+                _hospitalDAO.Editar(oldHosp);
                 //return View();
             }
             return RedirectToAction("Index", "Hospital");
 
         }
 
+        public IActionResult Remover(int id)
+        {
+            _hospitalDAO.Remover(id);
+            return RedirectToAction("Index", "Hospital");
+        }
     }
 }

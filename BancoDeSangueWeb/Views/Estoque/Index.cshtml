@@ -1,0 +1,20 @@
+﻿@model List<EstoqueSangue>
+<h3>Estoque de Sangue</h3>
+
+<table class="table table-hover table-striped mg-20">
+    <thead>
+        <tr>
+            <th>TipoSanguineo</th>
+            <th>Quantidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var estoque in Model)
+        {
+            <tr>
+                <td>@estoque.TipoSanguineo.ToString()</td>
+                <td>@estoque.Quantidade</td>
+            </tr>
+        }
+    </tbody>
+</table>

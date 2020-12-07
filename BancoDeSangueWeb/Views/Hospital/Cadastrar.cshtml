@@ -1,36 +1,39 @@
 ﻿@model Hospital
 
 
-    <form asp-action="Cadastrar" asp-controller="Hospital" method="post">
-        <fieldset>
-            <legend>Cadastrar Produto</legend>
+<form asp-action="Cadastrar" asp-controller="Hospital" method="post">
+    <fieldset>
+        <legend>Cadastrar Hospital</legend>
 
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group">
-                <label asp-for="Nome">Nome:</label>
-                <input class="form-control" asp-for="Nome" type="text" placeholder="Nome do Hospital" />
-                <span class="text-danger" asp-validation-for="Nome"></span>
-            </div>
+        <div class="form-group">
+            <label asp-for="Nome">Nome:</label>
+            <input class="form-control" asp-for="Nome" type="text" placeholder="Nome do Hospital" />
+            <span class="text-danger" asp-validation-for="Nome"></span>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="Endereco">Endereço:</label>
-                <input class="form-control" asp-for="Endereco" type="text" placeholder="Endereço do Hospital" />
-                <span class="text-danger" asp-validation-for="Endereco"></span>
-            </div>
+        <div class="form-group">
+            <label asp-for="Endereco">Endereço:</label>
+            <input class="form-control" asp-for="Endereco" type="text" placeholder="Endereço do Hospital" />
+            <span class="text-danger" asp-validation-for="Endereco"></span>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="Telefone">Telefone:</label>
-                <input class="form-control" asp-for="Telefone" type="text" placeholder="Telefone do Hospital" />
-                <span class="text-danger" asp-validation-for="Telefone"></span>
-            </div>
+        <div class="form-group">
+            <label asp-for="Telefone">Telefone:</label>
+            <input class="form-control" asp-for="Telefone" type="text" placeholder="Telefone do Hospital" />
+            <span class="text-danger" asp-validation-for="Telefone"></span>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="Nome_Responsavel">Responsavel:</label>
-                <input class="form-control" asp-for="Nome_Responsavel" type="text" placeholder="Responsavel pelo Hospital" />
-                <span class="text-danger" asp-validation-for="Nome_Responsavel"></span>
-            </div>
+        <div class="form-group">
+            <label asp-for="Nome_Responsavel">Responsavel:</label>
+            <input class="form-control" asp-for="Nome_Responsavel" type="text" placeholder="Responsavel pelo Hospital" />
+            <span class="text-danger" asp-validation-for="Nome_Responsavel"></span>
+        </div>
 
-            <input class="btn btn-success" type="submit" value="Cadastrar" />
-        </fieldset>
-    </form>
+        <div class="form-group">
+            <input class="btn btn-success mg-10" type="submit" value="Cadastrar" />
+            <a class="btn btn-secondary mg-10" asp-action="Index" asp-controller="Hospital">Voltar para Lista</a>
+        </div>
+    </fieldset>
+</form>

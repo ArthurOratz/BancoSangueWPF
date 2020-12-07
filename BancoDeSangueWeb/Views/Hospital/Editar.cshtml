@@ -1,42 +1,44 @@
 ﻿@model Hospital
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Editar Hospital</title>
-</head>
-<body>
-    <h2>EDIÇÃO DE HOSPITAL</h2>
-    <br /><br />
-    <form asp-action="Editar" asp-controller="Hospital" method="post">
-        <fieldset>
-            <legend>Editar Produto</legend>
+<form asp-action="Editar" asp-controller="Hospital" method="post">
+    <fieldset>
+        <legend>Editar Hospital</legend>
 
-            <div asp-validation-summary="ModelOnly"></div>
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
 
             <label asp-for="Id">Id:</label>
-            <input asp-for="Id" readonly type="text" placeholder="Id do Hospital" />
+            <input asp-for="Id" class="form-control" readonly type="text" placeholder="Id do Hospital" />
             <input asp-for="Id" type="hidden" />
-            <br />
+        </div>
+        <div class="form-group">
             <label asp-for="Nome">Nome:</label>
-            <input asp-for="Nome" type="text" placeholder="Nome do Hospital" />
-            <span asp-validation-for="Nome"></span>
-            <br />
+            <input class="form-control" asp-for="Nome" type="text" placeholder="Nome do Hospital" />
+            <span class="text-danger" asp-validation-for="Nome"></span>
+        </div>
+
+        <div class="form-group">
             <label asp-for="Endereco">Endereço:</label>
-            <input asp-for="Endereco" type="text" placeholder="Endereço do Hospital" />
-            <span asp-validation-for="Endereco"></span>
-            <br />
+            <input class="form-control" asp-for="Endereco" type="text" placeholder="Endereço do Hospital" />
+            <span class="text-danger" asp-validation-for="Endereco"></span>
+        </div>
+
+        <div class="form-group">
             <label asp-for="Telefone">Telefone:</label>
-            <input asp-for="Telefone" type="text" placeholder="Telefone do Hospital" />
-            <span asp-validation-for="Telefone"></span>
-            <br />
+            <input class="form-control" asp-for="Telefone" type="text" placeholder="Telefone do Hospital" />
+            <span class="text-danger" asp-validation-for="Telefone"></span>
+        </div>
+
+        <div class="form-group">
             <label asp-for="Nome_Responsavel">Responsavel:</label>
-            <input asp-for="Nome_Responsavel" type="text" placeholder="Responsavel pelo Hospital" />
-            <span asp-validation-for="Nome_Responsavel"></span>
-            <br />
-            <input type="submit" value="Salvar" />
-        </fieldset>
-    </form>
-</body>
-</html>
+            <input class="form-control" asp-for="Nome_Responsavel" type="text" placeholder="Responsavel pelo Hospital" />
+            <span class="text-danger" asp-validation-for="Nome_Responsavel"></span>
+        </div>
+
+        <input class="btn btn-success" type="submit" value="Salvar" />
+    </fieldset>
+</form>
+
+<div>
+    <a class="btn btn-secondary" asp-action="Index" asp-controller="Hospital">Voltar para Lista</a>
+</div>

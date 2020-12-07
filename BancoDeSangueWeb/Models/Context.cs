@@ -11,7 +11,8 @@ namespace BancoDeSangueWeb.Models
         public Context(DbContextOptions options) : base(options) { }
         public DbSet<Hospital> Hospital { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
-        //public DbSet<Doador> Doador { get; set; }
-        //public DbSet<TipoSanguineo> TipoSanguineo { get; set; }
+        public DbSet<Doador> Doador { get; set; }
+        public DbSet<TipoSanguineo> TipoSanguineo { get; set; }
+        public DbSet<EstoqueSangue> EstoqueSangue { get; set; }
     }
 }

@@ -13,7 +13,6 @@
             <th>Endereço</th>
             <th>Criado em</th>
             <th></th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -26,10 +25,9 @@
                 <td>@hospital.Endereco</td>
                 <td>@hospital.CriadoEm.ToShortDateString()</td>
                 <td>
-                    <a asp-action="Remover" asp-controller="Hospital" asp-route-id="@hospital.Id">Remover</a>
-                </td>
-                <td>
-                    <a asp-action="Editar" asp-controller="Hospital" asp-route-id="@hospital.Id">Editar</a>
+                    <a class="btn btn-danger" asp-action="Remover" asp-controller="Hospital" asp-route-id="@hospital.Id">Remover</a>
+
+                    <a class="btn btn-warning" asp-action="Editar" asp-controller="Hospital" asp-route-id="@hospital.Id">Editar</a>
                 </td>
 
             </tr>
@@ -38,4 +36,3 @@
 </table>
 
 <p><b>Quantidade de itens: </b> @Model.Count </p>
-<p><b>Dados Atualizados: </b> @DateTime.Now </p>

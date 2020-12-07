@@ -1,0 +1,41 @@
+﻿@model List<Doador>
+<h3>Gerenciamento dos Doadores</h3>
+
+<a class="btn btn-primary mg-10" asp-action="Cadastrar" asp-controller="Doador">Cadastrar Doador</a>
+
+<table class="table table-hover table-striped mg-20">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Tipo Sanguineo</th>
+            <th>Peso</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doador in Model)
+        {
+        <tr>
+            <td>@doador.Id</td>
+            <td>@doador.Nome</td>
+            <td>@doador.Cpf</td>
+            <td>@doador.Email</td>
+            <td>@doador.Telefone</td>
+            <td>@doador.TipoSanguineo.ToString()</td>
+            <td>@doador.Peso</td>
+            <td>
+                <a class="btn btn-danger" asp-action="Remover" asp-controller="Doador" asp-route-id="@doador.Id">Remover</a>
+
+                <a class="btn btn-warning" asp-action="Editar" asp-controller="Doador" asp-route-id="@doador.Id">Editar</a>
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+<p><b>Quantidade de itens: </b> @Model.Count </p>

@@ -1,0 +1,37 @@
+﻿@model List<Funcionario>
+<h3>Gerenciamento dos Funcionario</h3>
+
+<a class="btn btn-primary mg-10" asp-action="Cadastrar" asp-controller="Funcionario">Cadastrar Funcionario</a>
+
+<table class="table table-hover table-striped mg-20">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var funcionario in Model)
+        {
+            <tr>
+                <td>@funcionario.Id</td>
+                <td>@funcionario.Nome</td>
+                <td>@funcionario.Cpf</td>
+                <td>@funcionario.Email</td>
+                <td>@funcionario.Telefone</td>
+                <td>
+                    <a class="btn btn-danger" asp-action="Remover" asp-controller="Funcionario" asp-route-id="@funcionario.Id">Remover</a>
+
+                    <a class="btn btn-warning" asp-action="Editar" asp-controller="Funcionario" asp-route-id="@funcionario.Id">Editar</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p><b>Quantidade de itens: </b> @Model.Count </p>
