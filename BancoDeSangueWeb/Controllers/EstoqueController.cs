@@ -14,7 +14,7 @@ namespace BancoDeSangueWeb.Controllers
         public EstoqueController(EstoqueSangueDAO estoqueSangueDAO)
         {
             _estoqueSangueDAO = estoqueSangueDAO;
-            _estoqueSangueDAO.CriarEstoqueSangue();
+            //_estoqueSangueDAO.CriarEstoqueSangue();
         }
 
         public IActionResult Index()
