@@ -22,16 +22,15 @@ namespace BancoDeSangueWeb.Controllers
 
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            //_tipoSanguineoDAO.CriarTipoSanguineo();
-            ViewBag.Title = "Lista de Doadores";
-            return View(_doadorDAO.Listar());
+            ViewBag.listaTipoSanguineo = _tipoSanguineoDAO.Listar();
+            return View(id > 0 ? _doadorDAO.ListarPorTipoSanguineo(id) : _doadorDAO.Listar());
         }
 
         public IActionResult Cadastrar()
         {
-            ViewBag.TiposSanguineos = new SelectList(_tipoSanguineoDAO.Listar(), "Id","");
+            ViewBag.TiposSanguineos = new SelectList(_tipoSanguineoDAO.Listar(), "Id", "");
             return View();
         }
 

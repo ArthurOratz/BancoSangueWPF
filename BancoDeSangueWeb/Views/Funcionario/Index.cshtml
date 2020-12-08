@@ -1,12 +1,11 @@
 ﻿@model List<Funcionario>
-<h3>Gerenciamento dos Funcionario</h3>
+<h3>Funcionario</h3>
 
 <a class="btn btn-primary mg-10" asp-action="Cadastrar" asp-controller="Funcionario">Cadastrar Funcionario</a>
 
 <table class="table table-hover table-striped mg-20">
     <thead>
         <tr>
-            <th>#</th>
             <th>Nome</th>
             <th>CPF</th>
             <th>Email</th>
@@ -18,7 +17,6 @@
         @foreach (var funcionario in Model)
         {
             <tr>
-                <td>@funcionario.Id</td>
                 <td>@funcionario.Nome</td>
                 <td>@funcionario.Cpf</td>
                 <td>@funcionario.Email</td>
@@ -28,7 +26,6 @@
 
                     <a class="btn btn-warning" asp-action="Editar" asp-controller="Funcionario" asp-route-id="@funcionario.Id">Editar</a>
                 </td>
-
             </tr>
         }
     </tbody>

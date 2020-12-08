@@ -324,3 +324,5 @@ C:\Users\arthu\source\repos\BancoSangue\BancoDeSangueWeb\obj\Debug\netcoreapp3.1
 C:\Users\arthu\source\repos\BancoSangue\BancoDeSangueWeb\obj\Debug\netcoreapp3.1\Razor\Views\Doador\Index.cshtml.g.cs
 C:\Users\arthu\source\repos\BancoSangue\BancoDeSangueWeb\obj\Debug\netcoreapp3.1\Razor\Views\Doador\Cadastrar.cshtml.g.cs
 C:\Users\arthu\source\repos\BancoSangue\BancoDeSangueWeb\obj\Debug\netcoreapp3.1\Razor\Views\Estoque\Index.cshtml.g.cs
+C:\Users\arthu\source\repos\BancoSangue\BancoDeSangueWeb\obj\Debug\netcoreapp3.1\Razor\Views\Coleta\Index.cshtml.g.cs
+C:\Users\arthu\source\repos\BancoSangue\BancoDeSangueWeb\obj\Debug\netcoreapp3.1\Razor\Views\Retirada\Index.cshtml.g.cs

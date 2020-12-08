@@ -1,12 +1,23 @@
 ﻿@model List<Doador>
-<h3>Gerenciamento dos Doadores</h3>
+@{ List<TipoSanguineo> listaTipos = ViewBag.listaTipoSanguineo;}
+<h3>Doadores</h3>
 
-<a class="btn btn-primary mg-10" asp-action="Cadastrar" asp-controller="Doador">Cadastrar Doador</a>
+<a class="btn btn-primary mg-20" asp-action="Cadastrar" asp-controller="Doador">Cadastrar Doador</a>
+<div class="btn-toolbar mg-10" role="toolbar">
+    @foreach (var tipo in listaTipos)
+    {
+        <div class="btn-group mr-2" role="group">
+            <a class="btn btn-secondary" asp-controller="Doador" asp-action="Index" asp-route-id="@tipo.Id">@tipo.ToString()</a>
+        </div>
+    }
+    <div class="btn-group mr-2" role="group">
+        <a class="btn btn-secondary" asp-controller="Doador" asp-action="Index" asp-route-id="0">Todos</a>
+    </div>
+</div>
 
 <table class="table table-hover table-striped mg-20">
     <thead>
         <tr>
-            <th>#</th>
             <th>Nome</th>
             <th>CPF</th>
             <th>Email</th>
@@ -19,21 +30,20 @@
     <tbody>
         @foreach (var doador in Model)
         {
-        <tr>
-            <td>@doador.Id</td>
-            <td>@doador.Nome</td>
-            <td>@doador.Cpf</td>
-            <td>@doador.Email</td>
-            <td>@doador.Telefone</td>
-            <td>@doador.TipoSanguineo.ToString()</td>
-            <td>@doador.Peso</td>
-            <td>
-                <a class="btn btn-danger" asp-action="Remover" asp-controller="Doador" asp-route-id="@doador.Id">Remover</a>
+            <tr>
+                <td>@doador.Nome</td>
+                <td>@doador.Cpf</td>
+                <td>@doador.Email</td>
+                <td>@doador.Telefone</td>
+                <td>@doador.TipoSanguineo.ToString()</td>
+                <td>@doador.Peso</td>
+                <td>
+                    <a class="btn btn-danger" asp-action="Remover" asp-controller="Doador" asp-route-id="@doador.Id">Remover</a>
 
-                <a class="btn btn-warning" asp-action="Editar" asp-controller="Doador" asp-route-id="@doador.Id">Editar</a>
-            </td>
+                    <a class="btn btn-warning" asp-action="Editar" asp-controller="Doador" asp-route-id="@doador.Id">Editar</a>
+                </td>
 
-        </tr>
+            </tr>
         }
     </tbody>
 </table>

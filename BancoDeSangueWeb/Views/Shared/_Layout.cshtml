@@ -12,14 +12,15 @@
     <nav class="navbar navbar-dark bg-primary">
         <a class="navbar-brand" asp-controller="Estoque" asp-action="Index">Banco de Sangue</a>
         <a class="navbar-brand" asp-controller="Funcionario" asp-action="Index">Funcionários</a>
-        <a class="navbar-brand" asp-controller="Doador" asp-action="Index">Doadores</a>
+        <a class="navbar-brand" asp-controller="Doador" asp-action="Index" asp-route-id="0">Doadores</a>
         <a class="navbar-brand" asp-controller="Hospital" asp-action="Index">Hospitais</a>
+        <a class="navbar-brand" asp-controller="Coleta" asp-action="Index">Historico de Coleta</a>
+        <a class="navbar-brand" asp-controller="Retirada" asp-action="Index">Historico de Retirada</a>
     </nav>
 
     <div class="conteudo">
         @RenderBody()
     </div>
-
 
     <hr />
     <footer class="rodape">

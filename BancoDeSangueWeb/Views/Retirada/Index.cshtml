@@ -1,0 +1,33 @@
+﻿@model List<Retirada>
+
+<h3>Historico de Retiradas</h3>
+<a class="btn btn-primary mg-10" asp-action="Cadastrar" asp-controller="Retirada">Cadastrar Retirada</a>
+
+<table class="table table-hover table-striped mg-20">
+    <thead>
+        <tr>
+            <th>Hospital</th>
+            <th>Quantidade</th>
+            <th>Tipo Sanguineo</th>
+            <th>Data</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var retirada in Model)
+        {
+        <tr>
+            <td></td>
+            <td>@retirada.Quantidade</td>
+            <td></td>
+            <td>@DateTime.Now</td>
+            <td>
+                @*<a class="btn btn-danger" asp-action="Remover" asp-controller="Retirada" asp-route-id="@retirada.Id">Remover</a>*@
+                <a class="btn btn-warning" asp-action="Editar" asp-controller="Retirada" asp-route-id="@retirada.Id">Editar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<p><b>Quantidade de itens: </b> @Model.Count </p>

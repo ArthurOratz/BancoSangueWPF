@@ -1,0 +1,35 @@
+﻿@model List<Coleta>
+
+<h3>Historico de Coletas</h3>
+<a class="btn btn-primary mg-10" asp-action="Cadastrar" asp-controller="Coleta">Cadastrar Coleta</a>
+
+<table class="table table-hover table-striped mg-20">
+    <thead>
+        <tr>
+            <th>Doador</th>
+            <th>Funcionario</th>
+            <th>Quantidade</th>
+            <th>Tipo Sanguineo</th>
+            <th>Data</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var coleta in Model)
+        {
+        <tr>
+            <td></td>
+            <td></td>
+            <td>@coleta.Quantidade</td>
+            <td></td>
+            <td>@DateTime.Now</td>
+            <td>
+                @*<a class="btn btn-danger" asp-action="Remover" asp-controller="Coleta" asp-route-id="@coleta.Id">Remover</a>*@
+                <a class="btn btn-warning" asp-action="Editar" asp-controller="Coleta" asp-route-id="@coleta.Id">Editar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<p><b>Quantidade de itens: </b> @Model.Count </p>

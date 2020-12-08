@@ -1,17 +1,15 @@
 ﻿@model List<Hospital>
 
 
-<h3>Gerenciamento dos Hospitais</h3>
+<h3>Hospitais</h3>
 <a class="btn btn-primary mg-10" asp-action="Cadastrar" asp-controller="Hospital">Cadastrar Hospital</a>
 
 <table class="table table-hover table-striped mg-20">
     <thead>
         <tr>
-            <th>#</th>
             <th>Nome</th>
             <th>Telefone</th>
             <th>Endereço</th>
-            <th>Criado em</th>
             <th></th>
         </tr>
     </thead>
@@ -19,11 +17,9 @@
         @foreach (var hospital in Model)
         {
             <tr>
-                <td>@hospital.Id</td>
                 <td>@hospital.Nome</td>
                 <td>@hospital.Telefone</td>
                 <td>@hospital.Endereco</td>
-                <td>@hospital.CriadoEm.ToShortDateString()</td>
                 <td>
                     <a class="btn btn-danger" asp-action="Remover" asp-controller="Hospital" asp-route-id="@hospital.Id">Remover</a>
 

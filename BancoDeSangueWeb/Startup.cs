@@ -30,11 +30,13 @@ namespace BancoDeSangueWeb
             services.AddScoped<DoadorDAO>();
             services.AddScoped<TipoSanguineoDAO>();
             services.AddScoped<EstoqueSangueDAO>();
+            services.AddScoped<ColetaDAO>();
+            services.AddScoped<RetiradaDAO>();
 
             services.AddDbContext<Context>
                 (options => options.UseSqlServer(
                     Configuration.GetConnectionString("Connection")));
-                    
+
             services.AddControllersWithViews();
         }
 
