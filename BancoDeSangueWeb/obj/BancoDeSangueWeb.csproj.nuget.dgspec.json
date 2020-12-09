@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj": {}
+    "C:\\Users\\momow\\Source\\Repos\\BancoSangueWPF\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj": {
+    "C:\\Users\\momow\\Source\\Repos\\BancoSangueWPF\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj",
+        "projectUniqueName": "C:\\Users\\momow\\Source\\Repos\\BancoSangueWPF\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj",
         "projectName": "BancoDeSangueWeb",
-        "projectPath": "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj",
-        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\source\\repos\\BancoSangue\\BancoDeSangueWeb\\obj\\",
+        "projectPath": "C:\\Users\\momow\\Source\\Repos\\BancoSangueWPF\\BancoDeSangueWeb\\BancoDeSangueWeb.csproj",
+        "packagesPath": "C:\\Users\\momow\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\momow\\Source\\Repos\\BancoSangueWPF\\BancoDeSangueWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\momow\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

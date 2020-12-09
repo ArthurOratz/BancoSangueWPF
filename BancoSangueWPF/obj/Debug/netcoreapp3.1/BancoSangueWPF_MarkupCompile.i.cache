@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\arthu\source\repos\BancoSangue\BancoSangueWPF\obj\Debug\netcoreapp3.1\
+C:\Users\momow\Source\Repos\BancoSangueWPF\BancoSangueWPF\obj\Debug\netcoreapp3.1\
 BancoSangueWPF
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\arthu\source\repos\BancoSangue\BancoSangueWPF\App.xaml
+C:\Users\momow\Source\Repos\BancoSangueWPF\BancoSangueWPF\App.xaml
 6-1606826946
 
 48982072071
-217-46718395
+217463732784
 Views\frmCadastrarDoador.xaml;Views\frmCadastrarFuncionario.xaml;Views\frmCadastroHospital.xaml;Views\frmColeta.xaml;Views\frmPrincipal.xaml;Views\frmRetirada.xaml;
 
-True
+False
 
