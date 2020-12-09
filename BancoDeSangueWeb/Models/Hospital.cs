@@ -15,7 +15,7 @@ namespace BancoDeSangueWeb.Models
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string Telefone { get; set; }
         [Required(ErrorMessage = "Campo Obrigatório!")]
-        public string Nome_Responsavel { get; set; }
+        public string NomeResponsavel { get; set; }
 
     }
 }

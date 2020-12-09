@@ -16,5 +16,6 @@ namespace BancoDeSangueWeb.Models
         public DbSet<EstoqueSangue> EstoqueSangue { get; set; }
         public DbSet<Coleta> Coleta { get; set; }
         public DbSet<Retirada> Retirada { get; set; }
+        public DbSet<UsuarioView> Usuario { get; set; }
     }
 }

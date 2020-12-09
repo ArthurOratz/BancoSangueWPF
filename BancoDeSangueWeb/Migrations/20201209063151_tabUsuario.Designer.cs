@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BancoDeSangueWeb.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20201207053556_CreateDB")]
-    partial class CreateDB
+    [Migration("20201209063151_tabUsuario")]
+    partial class tabUsuario
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,6 +21,37 @@ namespace BancoDeSangueWeb.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("BancoDeSangueWeb.Models.Coleta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Data")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DoadorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FuncionarioId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Quantidade")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoadorId");
+
+                    b.HasIndex("FuncionarioId");
+
+                    b.ToTable("Coleta");
+                });
+
             modelBuilder.Entity("BancoDeSangueWeb.Models.Doador", b =>
                 {
                     b.Property<int>("Id")
@@ -29,21 +60,25 @@ namespace BancoDeSangueWeb.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Cpf")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Peso")
                         .HasColumnType("float");
 
                     b.Property<string>("Telefone")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TipoSanguineoId")
@@ -66,8 +101,8 @@ namespace BancoDeSangueWeb.Migrations
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
+                    b.Property<double>("Quantidade")
+                        .HasColumnType("float");
 
                     b.Property<int>("TipoSanguineoId")
                         .HasColumnType("int");
@@ -87,18 +122,22 @@ namespace BancoDeSangueWeb.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Cpf")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefone")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -124,7 +163,7 @@ namespace BancoDeSangueWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Nome_Responsavel")
+                    b.Property<string>("NomeResponsavel")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -135,6 +174,37 @@ namespace BancoDeSangueWeb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Hospital");
+                });
+
+            modelBuilder.Entity("BancoDeSangueWeb.Models.Retirada", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Data")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("HospitalId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Quantidade")
+                        .HasColumnType("float");
+
+                    b.Property<int>("TipoSanguineoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HospitalId");
+
+                    b.HasIndex("TipoSanguineoId");
+
+                    b.ToTable("Retirada");
                 });
 
             modelBuilder.Entity("BancoDeSangueWeb.Models.TipoSanguineo", b =>
@@ -158,10 +228,52 @@ namespace BancoDeSangueWeb.Migrations
                     b.ToTable("TipoSanguineo");
                 });
 
+            modelBuilder.Entity("BancoDeSangueWeb.Models.UsuarioView", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuario");
+                });
+
+            modelBuilder.Entity("BancoDeSangueWeb.Models.Coleta", b =>
+                {
+                    b.HasOne("BancoDeSangueWeb.Models.Doador", "Doador")
+                        .WithMany()
+                        .HasForeignKey("DoadorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BancoDeSangueWeb.Models.Funcionario", "Funcionario")
+                        .WithMany()
+                        .HasForeignKey("FuncionarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Doador");
+
+                    b.Navigation("Funcionario");
+                });
+
             modelBuilder.Entity("BancoDeSangueWeb.Models.Doador", b =>
                 {
                     b.HasOne("BancoDeSangueWeb.Models.TipoSanguineo", "TipoSanguineo")
-                        .WithMany("Doadores")
+                        .WithMany()
                         .HasForeignKey("TipoSanguineoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -180,9 +292,23 @@ namespace BancoDeSangueWeb.Migrations
                     b.Navigation("TipoSanguineo");
                 });
 
-            modelBuilder.Entity("BancoDeSangueWeb.Models.TipoSanguineo", b =>
+            modelBuilder.Entity("BancoDeSangueWeb.Models.Retirada", b =>
                 {
-                    b.Navigation("Doadores");
+                    b.HasOne("BancoDeSangueWeb.Models.Hospital", "Hospital")
+                        .WithMany()
+                        .HasForeignKey("HospitalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BancoDeSangueWeb.Models.TipoSanguineo", "TipoSanguineo")
+                        .WithMany()
+                        .HasForeignKey("TipoSanguineoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hospital");
+
+                    b.Navigation("TipoSanguineo");
                 });
 #pragma warning restore 612, 618
         }

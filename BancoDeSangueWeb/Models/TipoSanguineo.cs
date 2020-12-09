@@ -9,9 +9,7 @@ namespace BancoDeSangueWeb.Models
     {
         public string FatorRH { get; set; }
 
-        public string Tipo{ get; set; }
-
-        public List<Doador> Doadores { get; set; }
+        public string Tipo { get; set; }
 
         public override string ToString()
         {

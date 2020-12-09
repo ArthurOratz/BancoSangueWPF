@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BancoDeSangueWeb.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20201208052053_coletaRetirada")]
-    partial class coletaRetirada
+    [Migration("20201209033837_CriacaoDB")]
+    partial class CriacaoDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,25 +34,20 @@ namespace BancoDeSangueWeb.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("DoadorId")
+                    b.Property<int>("DoadorId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("FuncionarioId")
+                    b.Property<int>("FuncionarioId")
                         .HasColumnType("int");
 
                     b.Property<double>("Quantidade")
                         .HasColumnType("float");
-
-                    b.Property<int?>("TipoSanguineoId")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DoadorId");
 
                     b.HasIndex("FuncionarioId");
-
-                    b.HasIndex("TipoSanguineoId");
 
                     b.ToTable("Coleta");
                 });
@@ -65,21 +60,25 @@ namespace BancoDeSangueWeb.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Cpf")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Peso")
                         .HasColumnType("float");
 
                     b.Property<string>("Telefone")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TipoSanguineoId")
@@ -123,18 +122,22 @@ namespace BancoDeSangueWeb.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Cpf")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefone")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -160,7 +163,7 @@ namespace BancoDeSangueWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Nome_Responsavel")
+                    b.Property<string>("NomeResponsavel")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -186,13 +189,13 @@ namespace BancoDeSangueWeb.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("HospitalId")
+                    b.Property<int>("HospitalId")
                         .HasColumnType("int");
 
                     b.Property<double>("Quantidade")
                         .HasColumnType("float");
 
-                    b.Property<int?>("TipoSanguineoId")
+                    b.Property<int>("TipoSanguineoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -229,27 +232,25 @@ namespace BancoDeSangueWeb.Migrations
                 {
                     b.HasOne("BancoDeSangueWeb.Models.Doador", "Doador")
                         .WithMany()
-                        .HasForeignKey("DoadorId");
+                        .HasForeignKey("DoadorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("BancoDeSangueWeb.Models.Funcionario", "Funcionario")
                         .WithMany()
-                        .HasForeignKey("FuncionarioId");
-
-                    b.HasOne("BancoDeSangueWeb.Models.TipoSanguineo", "TipoSanguineo")
-                        .WithMany()
-                        .HasForeignKey("TipoSanguineoId");
+                        .HasForeignKey("FuncionarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Doador");
 
                     b.Navigation("Funcionario");
-
-                    b.Navigation("TipoSanguineo");
                 });
 
             modelBuilder.Entity("BancoDeSangueWeb.Models.Doador", b =>
                 {
                     b.HasOne("BancoDeSangueWeb.Models.TipoSanguineo", "TipoSanguineo")
-                        .WithMany("Doadores")
+                        .WithMany()
                         .HasForeignKey("TipoSanguineoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -272,20 +273,19 @@ namespace BancoDeSangueWeb.Migrations
                 {
                     b.HasOne("BancoDeSangueWeb.Models.Hospital", "Hospital")
                         .WithMany()
-                        .HasForeignKey("HospitalId");
+                        .HasForeignKey("HospitalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("BancoDeSangueWeb.Models.TipoSanguineo", "TipoSanguineo")
                         .WithMany()
-                        .HasForeignKey("TipoSanguineoId");
+                        .HasForeignKey("TipoSanguineoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Hospital");
 
                     b.Navigation("TipoSanguineo");
-                });
-
-            modelBuilder.Entity("BancoDeSangueWeb.Models.TipoSanguineo", b =>
-                {
-                    b.Navigation("Doadores");
                 });
 #pragma warning restore 612, 618
         }

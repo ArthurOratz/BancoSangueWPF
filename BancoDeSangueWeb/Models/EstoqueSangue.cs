@@ -8,12 +8,11 @@ namespace BancoDeSangueWeb.Models
 {
     public class EstoqueSangue : BaseModel
     {
-
         [ForeignKey("TipoSanguineoId")]
         public TipoSanguineo TipoSanguineo { get; set; }
 
         public int TipoSanguineoId { get; set; }
 
-        public int Quantidade { get; set; }
+        public double Quantidade { get; set; }
     }
 }

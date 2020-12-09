@@ -15,6 +15,38 @@ namespace BancoDeSangueWeb.DAL
 
         public List<EstoqueSangue> Listar() => _context.EstoqueSangue.Include(x => x.TipoSanguineo).ToList();
 
+        public EstoqueSangue BuscarPorTipoSanguineo(int tipoSanguineoId) => _context.EstoqueSangue.FirstOrDefault(c => c.TipoSanguineoId == tipoSanguineoId);
+
+        public void AumentaEstoque(int tipoSanguineoId, double quantidade)
+        {
+            var estoque = BuscarPorTipoSanguineo(tipoSanguineoId);
+            estoque.Quantidade += quantidade;
+
+            _context.Update(estoque);
+            _context.SaveChanges();
+        }
+
+        public void DiminuirEstoque(int tipoSanguineoId, double quantidade)
+        {
+            var estoque = BuscarPorTipoSanguineo(tipoSanguineoId);
+
+            estoque.Quantidade -= quantidade;
+            _context.Update(estoque);
+            _context.SaveChanges();
+
+        }
+
+        public double VerificaQtEstoque(int tipoSanguineoId) => BuscarPorTipoSanguineo(tipoSanguineoId).Quantidade;
+
+
+
+
+
+
+
+
+
+
         public void CriarEstoqueSangue()
         {
             var aPos = new TipoSanguineo { FatorRH = "+", Tipo = "A" };
@@ -25,11 +57,7 @@ namespace BancoDeSangueWeb.DAL
             var abNeg = new TipoSanguineo { FatorRH = "-", Tipo = "AB" };
             var oPos = new TipoSanguineo { FatorRH = "+", Tipo = "O" };
             var oNeg = new TipoSanguineo { FatorRH = "-", Tipo = "O" };
-
-            var teste = new List<TipoSanguineo> { aPos, aNeg, bPos, bNeg, abPos, abNeg, oPos, oNeg };
-
-            _context.TipoSanguineo.AddRange(teste);
-
+            _context.TipoSanguineo.AddRange(aPos, aNeg, bPos, bNeg, abPos, abNeg, oPos, oNeg);
             _context.EstoqueSangue.Add(new EstoqueSangue { TipoSanguineo = aPos, Quantidade = 0 });
             _context.EstoqueSangue.Add(new EstoqueSangue { TipoSanguineo = aNeg, Quantidade = 0 });
             _context.EstoqueSangue.Add(new EstoqueSangue { TipoSanguineo = bPos, Quantidade = 0 });

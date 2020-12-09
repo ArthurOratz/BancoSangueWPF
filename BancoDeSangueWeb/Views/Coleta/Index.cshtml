@@ -17,17 +17,17 @@
     <tbody>
         @foreach (var coleta in Model)
         {
-        <tr>
-            <td></td>
-            <td></td>
-            <td>@coleta.Quantidade</td>
-            <td></td>
-            <td>@DateTime.Now</td>
-            <td>
-                @*<a class="btn btn-danger" asp-action="Remover" asp-controller="Coleta" asp-route-id="@coleta.Id">Remover</a>*@
-                <a class="btn btn-warning" asp-action="Editar" asp-controller="Coleta" asp-route-id="@coleta.Id">Editar</a>
-            </td>
-        </tr>
+            <tr>
+                <td>@coleta.Doador.Nome</td>
+                <td>@coleta.Funcionario.Nome</td>
+                <td>@coleta.Quantidade</td>
+                <td>@coleta.Doador.TipoSanguineo</td>
+                <td>@coleta.Data.ToShortDateString()</td>
+                <td>
+                    @*<a class="btn btn-danger" asp-action="Remover" asp-controller="Coleta" asp-route-id="@coleta.Id">Remover</a>*@
+                    @*<a class="btn btn-warning" asp-action="Editar" asp-controller="Coleta" asp-route-id="@coleta.Id">Editar</a>*@
+                </td>
+            </tr>
         }
     </tbody>
 </table>
